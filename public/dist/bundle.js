@@ -9,6 +9,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./config.js":
+/*!*******************!*\
+  !*** ./config.js ***!
+  \*******************/
+/***/ ((module) => {
+
+eval("var token = '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';\nmodule.exports = token; // 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\n\n//# sourceURL=webpack://product-retail/./config.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
@@ -861,7 +871,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n\n\n\n\nvar App = function App() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"Rendering from App\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://product-retail/./public/src/components/App.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _config_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../config.js */ \"./config.js\");\n/* harmony import */ var _config_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_config_js__WEBPACK_IMPORTED_MODULE_3__);\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\nvar url = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-lax';\nvar auth = {\n  headers: {\n    Authorization: (_config_js__WEBPACK_IMPORTED_MODULE_3___default())\n  }\n};\n\nvar App = function App() {\n  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({\n    currentProduct: null,\n    styles: [],\n    currentStyle: []\n  }),\n      _useState2 = _slicedToArray(_useState, 2),\n      products = _useState2[0],\n      setProducts = _useState2[1];\n\n  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {\n    axios__WEBPACK_IMPORTED_MODULE_1___default().get(\"\".concat(url, \"/products/?page=1&count=100&product_id=16060\"), auth).then(function (_ref) {\n      var data = _ref.data;\n      console.log(data);\n      dispatch({\n        type: 'products',\n        products: data\n      });\n    })[\"catch\"](function (err) {\n      return console.error(err);\n    });\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, \"Rendering from App\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);\n\n//# sourceURL=webpack://product-retail/./public/src/components/App.jsx?");
 
 /***/ }),
 
@@ -876,6 +886,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./public/src/reducers/productsReducer.js":
+/*!************************************************!*\
+  !*** ./public/src/reducers/productsReducer.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar intialState = {\n  products: []\n};\n\nvar productsReducer = function productsReducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : intialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  if (action.type === 'products') {\n    return {\n      products: action.products\n    };\n  }\n\n  return state;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (productsReducer);\n\n//# sourceURL=webpack://product-retail/./public/src/reducers/productsReducer.js?");
+
+/***/ }),
+
+/***/ "./public/src/reducers/questionsReducer.js":
+/*!*************************************************!*\
+  !*** ./public/src/reducers/questionsReducer.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar intialState = {\n  questions: []\n};\n\nvar questionsReducer = function questionsReducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : intialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  if (action.type === 'questions') {\n    return {\n      questions: action.questions\n    };\n  }\n\n  return state;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (questionsReducer);\n\n//# sourceURL=webpack://product-retail/./public/src/reducers/questionsReducer.js?");
+
+/***/ }),
+
+/***/ "./public/src/reducers/reviewsReducer.js":
+/*!***********************************************!*\
+  !*** ./public/src/reducers/reviewsReducer.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar initialState = {\n  reviews: []\n};\n\nvar reviewsReducer = function reviewsReducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  if (action.type === 'reviews') {\n    return {\n      reviews: action.reviews\n    };\n  }\n\n  return state;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reviewsReducer);\n\n//# sourceURL=webpack://product-retail/./public/src/reducers/reviewsReducer.js?");
+
+/***/ }),
+
 /***/ "./public/src/store/store.js":
 /*!***********************************!*\
   !*** ./public/src/store/store.js ***!
@@ -883,7 +926,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n\n // import reviewsReducer from '../reducers/reviewsReducer.js';\n// import productsReducer from '../reducers/productsReducer.js';\n// import questionsReducer from '../reducers/questionsReducer.js';\n\nvar composeEnhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || redux__WEBPACK_IMPORTED_MODULE_1__.compose;\nvar store = (0,redux__WEBPACK_IMPORTED_MODULE_1__.createStore)((0,redux__WEBPACK_IMPORTED_MODULE_1__.combineReducers)({}), composeEnhancers((0,redux__WEBPACK_IMPORTED_MODULE_1__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_0__.default)));\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);\n\n//# sourceURL=webpack://product-retail/./public/src/store/store.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n/* harmony import */ var _reducers_reviewsReducer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reducers/reviewsReducer.js */ \"./public/src/reducers/reviewsReducer.js\");\n/* harmony import */ var _reducers_productsReducer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/productsReducer.js */ \"./public/src/reducers/productsReducer.js\");\n/* harmony import */ var _reducers_questionsReducer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/questionsReducer.js */ \"./public/src/reducers/questionsReducer.js\");\n\n\n\n\n\nvar composeEnhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || redux__WEBPACK_IMPORTED_MODULE_4__.compose;\nvar store = (0,redux__WEBPACK_IMPORTED_MODULE_4__.createStore)((0,redux__WEBPACK_IMPORTED_MODULE_4__.combineReducers)({\n  reviewsReducer: _reducers_reviewsReducer_js__WEBPACK_IMPORTED_MODULE_1__.default,\n  productsReducer: _reducers_productsReducer_js__WEBPACK_IMPORTED_MODULE_2__.default,\n  questionsReducer: _reducers_questionsReducer_js__WEBPACK_IMPORTED_MODULE_3__.default\n}), composeEnhancers((0,redux__WEBPACK_IMPORTED_MODULE_4__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_0__.default)));\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);\n\n//# sourceURL=webpack://product-retail/./public/src/store/store.js?");
 
 /***/ })
 
