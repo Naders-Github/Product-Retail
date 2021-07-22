@@ -1,4 +1,9 @@
 node_modules
-/public/dist/bundle.js
+bundle.js
 config.js
-/.DS_Store
+firebase.js
+package-lock.json
+.DS_Store
+client/.DS_Store
+client/src/.DS_Store
+client/src/components/.DS_Store
