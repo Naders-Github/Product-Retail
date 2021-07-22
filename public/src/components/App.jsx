@@ -1,10 +1,11 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import Reviews from './R&R/Reviews//Reviews.jsx';
+import Ratings from './R&R/Ratings/Ratings.jsx';
+import Overview from './products/Overview.jsx';
 import token from '../../../config.js';
-import Reviews from './R&R/Reviews.jsx';
-import Products from './products/Products.jsx';
-import Questions from './Q&A/Questions.jsx';
+// import Questions from './Q&A/Main.jsx';
 
 const url = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-lax';
 const auth = {
@@ -15,46 +16,36 @@ const auth = {
 
 const App = () => {
   const dispatch = useDispatch();
-  const [products, setProducts] = useState({
-    currentProduct: null,
-    styles: [],
-    currentStyle: []
-  });
 
   useEffect(() => {
-    axios.get(`${url}/products/?page=1&count=100&product_id=16060`, auth)
+    axios.get(`${url}/reviews/?count=100&product_id=16060`, auth)
       .then(({ data }) => {
-        dispatch({ type: 'products', products: data })
+        dispatch({ type: 'reviews', reviews: data });
       })
-      .catch((err) => console.error(err));
-  }, []);
-
+      .catch((err) => consle.error(err));
+  }, [])
   useEffect(() => {
-    axios.get(`${url}/qa/questions/?page=1&count=100&product_id=16060`, auth)
+    axios.get(`${url}/products/?count=100&product_id=16060`, auth)
       .then(({ data }) => {
-        dispatch({ type: 'questions', questions: data.results })
+        dispatch({ type: 'products', products: data });
       })
-      .catch((err) => console.error(err));
-  }, []);
-
-  useEffect(() => {
-    axios.get(`${url}/reviews/?page=1&count=100&product_id=16060`, auth)
-      .then(({ data }) => {
-        dispatch({ type: 'reviews', reviews: data.results })
-      })
-      .catch((err) => console.error(err));
-  }, []);
+      .catch((err) => consle.error(err));
+  }, [])
 
   return (
     <div>
-      <div className="products">
-        <Products/>
+      <div className="main" data-spy="scroll" data-target="navbar" data-offset="0">
+        <Overview/>
+      </div>
+      <div className="ratings">
+        <Ratings/>
       </div>
       <div className="reviews">
         <Reviews/>
       </div>
+      <br/>
       <div className="questions">
-        <Questions/>
+        {/* <Questions/> */}
       </div>
     </div>
   );

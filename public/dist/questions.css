@@ -1,0 +1,193 @@
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.questions {
+  max-height: 60%;
+  margin-top: 55vh;
+}
+
+#lightbox {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* optional background color */
+  background-color: rgba(99, 93, 105, 0.52);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#lightbox-img {
+  height: 80vh;
+  max-width: 90vh;
+  object-fit: cover;
+}
+
+#cursor:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.text-button {
+  border: none;
+  padding: 0;
+  background: none !important;
+  text-decoration: underline;
+  font-weight: bolder;
+  color: inherit;
+}
+
+
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: whitesmoke;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.QuestionsList {
+  overflow-y: scroll;
+  width: 131vh;
+  position: relative;
+  max-height: 65vh;
+  margin-left: 20.5vh;
+}
+
+.AddToBag {
+  background-color: #FF6B6B !important;
+  color: whitesmoke !important;
+}
+
+#app {
+  background-color: whitesmoke;
+  font-family: 'Merriweather', serif;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+
+#answer {
+  font-weight: 300;
+  font-style: normal;
+}
+
+#bold-black {
+  color: black;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.search-bar {
+  background-color: #33202A !important;
+  color: whitesmoke;
+}
+
+#reviews-link {
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.search-questions {
+  background-color: #EAE7DC;
+  border-color: black;
+  color: black;
+  width: 130vh;
+  margin: 0vh 0vh 0vh 20vh;
+  height: 6vh;
+}
+
+#widget {
+  padding: 10px;
+  border-top: black;
+  border-color: black;
+}
+
+#questions-button {
+  background-color: whitesmoke !important;
+  color: black !important;
+  border-color: black !important;
+  padding: 18px !important;
+}
+
+#modal-title {
+  color: black;
+  font-weight: normal;
+  font-style: italic;
+}
+
+#fetch {
+  color: whitesmoke;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+#modal-subtitle {
+  color: black;
+  font-weight: lighter;
+  font-style: oblique;
+}
+
+#shop-name {
+  color: whitesmoke !important;
+  font-weight: bolder;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+button {
+  background-color: whitesmoke !important;
+  color: black !important;
+  border-color: black !important;
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  color: black !important;
+  font-weight: bolder;
+}
+
+
+h2 {
+  color: black !important;
+  font-style: italic;
+  font-weight: 300;
+}
+
+h6 {
+  color: black !important;
+  font-weight: bolder;
+}
+
+body {
+  background-color: whitesmoke !important;
+}
+
+#nav-bar {
+  background-color: #33202A;
+  color: black;
+  padding: 25px;
+}
